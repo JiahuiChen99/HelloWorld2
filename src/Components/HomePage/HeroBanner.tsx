@@ -1,4 +1,29 @@
+import * as echarts from 'echarts';
+import {useEffect} from "react";
+import GraphConfig from "../../Assets/GraphConfig";
+import graph_data from "../../Assets/JiahuiGraph.json";
+
 function HeroBanner() {
+
+    // Load data & generate graph on component mount
+    useEffect(
+        () => {
+            let graphDom = document.getElementById('graph');
+            let graph = echarts.init(graphDom);
+
+            // Graph data config
+            GraphConfig.legend[0].data = graph_data.categories.map( (a: {name: string}) => {
+                return a.name
+            });
+            GraphConfig.series[0].data = graph_data.nodes;
+            GraphConfig.series[0].links = graph_data.links;
+            GraphConfig.series[0].categories = graph_data.categories;
+
+            graph.setOption(GraphConfig);
+        },
+        []
+    );
+
     return(
         <section id="Hero Banner" className="flex w-full h-5/6">
             {/* Greeting */}
