@@ -1,7 +1,7 @@
 import * as echarts from 'echarts';
 import {useEffect} from "react";
 import GraphConfig from "../../Assets/GraphConfig";
-import graph_data from "../../Assets/JiahuiGraph.json";
+import {JiahuiGraph}  from "../../Assets/JiahuiGraph";
 
 function HeroBanner() {
 
@@ -12,12 +12,15 @@ function HeroBanner() {
             let graph = echarts.init(graphDom);
 
             // Graph data config
-            GraphConfig.legend[0].data = graph_data.categories.map( (a: {name: string}) => {
-                return a.name
+            GraphConfig.legend[0].data = JiahuiGraph.categories.map( (a: {name: string, icon: string}) => {
+                return {
+                    name: a.name,
+                    icon: a.icon
+                }
             });
-            GraphConfig.series[0].data = graph_data.nodes;
-            GraphConfig.series[0].links = graph_data.links;
-            GraphConfig.series[0].categories = graph_data.categories;
+            GraphConfig.series[0].data = JiahuiGraph.nodes;
+            GraphConfig.series[0].links = JiahuiGraph.links;
+            GraphConfig.series[0].categories = JiahuiGraph.categories;
 
             graph.setOption(GraphConfig);
         },
