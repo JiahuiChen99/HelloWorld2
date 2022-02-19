@@ -23,6 +23,21 @@ function HeroBanner() {
             GraphConfig.series[0].categories = JiahuiGraph.categories;
 
             graph.setOption(GraphConfig);
+
+            // Add chart resize listener
+            function resizeChart(event) {
+                // Hide/Show graph legend
+                GraphConfig.legend[0].show = event.target.innerWidth >= 1280;
+                graph.setOption(GraphConfig);
+                graph?.resize();
+            }
+            window.addEventListener("resize", resizeChart);
+
+            // Return cleanup function
+            return () => {
+                graph?.dispose();
+                window.removeEventListener("resize", resizeChart);
+            };
         },
         []
     );

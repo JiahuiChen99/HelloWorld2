@@ -2,6 +2,7 @@ const GraphConfig = {
     tooltip: {},
     legend: [
         {
+            show: true,
             data: [],
             orient: 'vertical',
             right: 10,
