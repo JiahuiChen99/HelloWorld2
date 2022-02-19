@@ -8,6 +8,11 @@ const GraphConfig = {
             right: 10,
             top: 'center',
             align: 'right',
+            itemWidth: 24,
+            itemHeight: 24,
+            textStyle: {
+                fontWeight: 'bolder'
+            }
         }
     ],
     series: [
