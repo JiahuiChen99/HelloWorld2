@@ -1,6 +1,9 @@
+import HomePage from "./Pages/HomePage";
+
 function App() {
     return (
-        <div className="">
+        <div className="flex w-screen h-screen overflow-x-hidden">
+            <HomePage/>
         </div>
     );
 }
