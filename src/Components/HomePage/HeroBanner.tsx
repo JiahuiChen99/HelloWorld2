@@ -54,7 +54,7 @@ function HeroBanner() {
             </div>
 
             {/* Graph */}
-            <div className="flex w-8/12 h-full" id="graph"/>
+            <div className="hidden md:flex w-8/12 h-full" id="graph"/>
         </section>
     )
 }
