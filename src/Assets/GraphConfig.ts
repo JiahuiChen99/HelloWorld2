@@ -20,6 +20,7 @@ const GraphConfig = {
             name: 'Jiahui Graph',
             type: 'graph',
             layout: 'force',
+            draggable: true,
             data: [],
             links: [],
             categories: [],
@@ -27,7 +28,11 @@ const GraphConfig = {
                 position: 'right'
             },
             force: {
-                repulsion: 100
+                repulsion: 250
+            },
+            lineStyle: {
+                color: 'source',
+                curveness: 0.1
             }
         }
     ],
