@@ -2,7 +2,8 @@ import ThemeButton from "../UI/ThemeButton";
 
 const NavBar = () => {
     return(
-        <div className="flex w-full h-32 justify-between py-10">
+        <div className="flex relative sticky top-0 w-full h-32 justify-between py-10
+                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-10">
             {/* Navigation bar links */}
             <nav className="flex w-auto h-auto">
                 <ul className="flex w-auto gap-x-10 items-center font-bold">
