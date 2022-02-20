@@ -3,7 +3,7 @@ import NavBar from "./Components/NavigationBar/NavBar";
 
 function App() {
     return (
-        <div className="flex flex-col w-screen h-screen overflow-x-hidden">
+        <div className="flex flex-col w-full h-full overflow-x-hidden">
             <NavBar/>
             <HomePage/>
         </div>
