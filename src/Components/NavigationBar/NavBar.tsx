@@ -1,9 +1,32 @@
 import ThemeButton from "../UI/ThemeButton";
+import {useEffect, useState} from "react";
 
 const NavBar = () => {
+    const [atTopPage, setTop] = useState(false);
+
+    // Apply styles on scroll
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            // User has scrolled
+            setTop(false);
+        } else {
+            // User is at top of page
+            setTop(true);
+        }
+    };
+
+    // Scroll event listener on navigation bar mount
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return(
-        <div className="flex relative sticky top-0 w-full h-32 justify-between py-10
-                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-10">
+        <div className={`flex fixed top-0 w-full h-32 justify-between py-10 transition-all ease-in-out delay-100
+                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-10
+                        ${atTopPage ? 'border-b-0' : 'border-b'}`}>
             {/* Navigation bar links */}
             <nav className="flex w-auto h-auto">
                 <ul className="flex w-auto gap-x-10 items-center font-bold">

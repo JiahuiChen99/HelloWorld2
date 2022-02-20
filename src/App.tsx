@@ -3,9 +3,11 @@ import NavBar from "./Components/NavigationBar/NavBar";
 
 function App() {
     return (
-        <div className="flex flex-col absolute w-full h-full overflow-x-hidden">
+        <div id="App" className="flex flex-col w-full min-h-full overflow-x-hidden">
             <NavBar/>
-            <HomePage/>
+            <div className="mt-32">
+                <HomePage/>
+            </div>
         </div>
     );
 }
