@@ -43,7 +43,7 @@ function HeroBanner() {
     );
 
     return(
-        <section id="Hero Banner" className="flex w-full h-5/6">
+        <section id="Hero Banner" className="flex w-full h-[70vh]">
             {/* Greeting */}
             <div className="flex w-4/12 h-full justify-center text-3xl">
                 <div className="flex flex-col max-h-min w-auto justify-center">
