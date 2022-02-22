@@ -84,8 +84,18 @@ const FeaturedProjects = () => {
     ];
 
     return(
-        <section id="Featured Projects" className="flex w-full h-auto py-20 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
+        <section id="Featured Projects" className="flex flex-col w-full h-auto py-20 gap-y-10 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
+            {/* Featured projects section header */}
             <h1 className="text-2xl font-bold"> Featured Projects </h1>
+
+            {/* Featured projects cards */}
+            {
+                featuredProjects.map( (project, index) => {
+                    return (
+                        <FeaturedProjectCard key={index} id={index} project={project}/>
+                    )
+                })
+            }
         </section>
     )
 }
