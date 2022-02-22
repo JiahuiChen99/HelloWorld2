@@ -1,7 +1,7 @@
 import {HiOutlineExternalLink} from "react-icons/hi";
 import {BsCardText, BsGithub} from "react-icons/bs";
 import FeaturedProjectCard from "./FeaturedProjectCard";
-import {IoLogoElectron, IoLogoVue} from "react-icons/io5";
+import {IoLogoElectron, IoLogoHtml5, IoLogoJavascript, IoLogoVue} from "react-icons/io5";
 import {SiBulma, SiDialogflow, SiJava, SiTailwindcss, SiTensorflow} from "react-icons/si";
 import {Golang} from "grommet-icons";
 
@@ -91,10 +91,14 @@ const FeaturedProjects = () => {
                 'via-[#C779D0]',
                 'to-[#4BC0C8]'
             ],
-            description: "",
+            description: "LoL Champ Selector is a chatbot about world's most famous eSport game. " +
+                "It assists summoners (players) finding a new champion to play with, based on the preferred difficulty." +
+                "It also includes features like champions description storytelling, items recommendations and much more, give it a try!",
             tech_stack: [
                 <SiJava size={42}/>,
                 <IoLogoElectron size={42}/>,
+                <IoLogoJavascript size={42}/>,
+                <IoLogoHtml5 size={42}/>,
                 <SiDialogflow size={42}/>,
                 <SiBulma size={42}/>
             ],
