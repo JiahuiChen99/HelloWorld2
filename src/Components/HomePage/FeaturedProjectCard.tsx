@@ -7,6 +7,27 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
     // Card hover state
     const [cardHover, setHover] = useState(false);
 
+    const LogoShortTitle = () => {
+        // Logo & Short name
+        if ( props.project.img !== undefined && props.project.short_name !== undefined ) {
+            return (
+                <>
+                    <img src={ props.project.img } alt="Logo" className="w-10 h-10"/>
+                    <span> { props.project.short_name } </span>
+                </>
+            )
+        }
+
+        // No logo
+        if ( props.project.short_name !== undefined ) {
+            return (
+                <>
+                    <span> { props.project.short_name } </span>
+                </>
+            )
+        }
+    }
+
     return(
         <div className={`flex relative w-full h-[50vh] rounded-xl bg-gradient-to-br ${props.project.colors.join(' ')}`}
              onMouseEnter={ () => {setHover(true)} }
@@ -18,12 +39,11 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
             }>
                 {/* Logo & Short title */}
                 <div className="flex w-auto place-items-center font-bold text-2xl gap-x-2">
-                    <img src={props.project.img} alt="Logo" className="w-10 h-10"/>
-                    <span> { props.project.short_name } </span>
+                    { LogoShortTitle() }
                 </div>
 
                 {/* Title */}
-                <span className="text-5xl text-center font-bold px-20"> { props.project.name} </span>
+                <span className="text-5xl text-center font-bold px-20"> { props.project.name } </span>
 
                 {/* Icon Buttons section */}
                 {
