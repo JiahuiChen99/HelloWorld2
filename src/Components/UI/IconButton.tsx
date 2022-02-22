@@ -11,7 +11,7 @@ const IconButton = ( props: {icon: JSX.Element, name: string}) => {
     const [hover, setHover] = useState(false);
 
     return(
-        <button className="flex w-fit h-fit justify-center items-center border border-slate-300 rounded-xl p-5 gap-x-2"
+        <button className="flex w-fit h-fit justify-center items-center border border-slate-300 rounded-xl p-3 gap-x-2"
                 onMouseEnter={ () => {setHover(true)} }
                 onMouseLeave={ () => {setHover(false)} }
         >
