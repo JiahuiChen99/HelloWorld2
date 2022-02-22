@@ -10,6 +10,7 @@ interface Icon {
 export interface FeaturedProject {
     name: string;
     short_name?: string;
+    description: string;
     img?: string;
     colors: string[];
     icons: Icon[];
@@ -20,6 +21,10 @@ const FeaturedProjects = () => {
         {
             name: "Moodle Learning Analytics",
             short_name: "MLA",
+            description: " MLA is an application that analyses students’ generated Moodle logs and\n" +
+                "performs sentiment analysis from forums’ chats. " +
+                "Starting from January 2022 the software will be used in different Spanish Universities and\n" +
+                "schools (La Salle URL, UPC, URV, etc)",
             img: "https://raw.githubusercontent.com/LS-LEDA/MLA/main/public/assets/mla_logo.png",
             colors: [
                 'from-[#3F51B5]',
@@ -46,6 +51,7 @@ const FeaturedProjects = () => {
         {
             name: "Yako - Heterogeneous Computing Farm",
             short_name: "Yako",
+            description: "",
             colors: [
                 'from-[#C6FFDD]',
                 'via-[#FBD786]',
@@ -69,6 +75,7 @@ const FeaturedProjects = () => {
                 'via-[#C779D0]',
                 'to-[#4BC0C8]'
             ],
+            description: "",
             icons: [
                 {
                     name: 'More information',
