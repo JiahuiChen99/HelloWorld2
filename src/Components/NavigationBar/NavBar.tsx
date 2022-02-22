@@ -25,7 +25,7 @@ const NavBar = () => {
 
     return(
         <div className={`flex fixed top-0 w-full h-32 justify-between py-10 transition-all ease-in-out delay-100
-                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-10
+                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-50
                         px-10 md:px-20 lg:px-32 xl:40 2xl:px-96
                         ${atTopPage ? 'border-b-0' : 'border-b'}`}>
             {/* Navigation bar links */}
