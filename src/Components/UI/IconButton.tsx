@@ -7,13 +7,25 @@ import {useState} from "react";
  *     name: Name of the button
  * }
  */
-const IconButton = ( props: {icon: JSX.Element, name: string}) => {
+const IconButton = ( props: {id: number, url?: string, icon: JSX.Element, name: string}) => {
     const [hover, setHover] = useState(false);
 
+    const clickHandler = ( buttonID ) => {
+        switch ( buttonID ) {
+            // Show more information
+            case 0:
+                // TODO: Show more information
+                break;
+            // Open external link
+            default:
+                window.open(props.url)
+        }
+    }
     return(
         <button className="flex w-fit h-fit justify-center items-center border border-slate-300 rounded-xl p-3 gap-x-2"
                 onMouseEnter={ () => {setHover(true)} }
                 onMouseLeave={ () => {setHover(false)} }
+                onClick={ () => clickHandler(props.id) }
         >
             {props.icon}
             {/* Button meaning displayed on hover */}

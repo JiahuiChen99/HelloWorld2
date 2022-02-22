@@ -31,7 +31,7 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
                         <div className="flex w-auto h-auto space-x-5">
                             {
                                 props.project.icons.map( (icon, index) => {
-                                    return <IconButton key={index} icon={icon.icon} name={icon.name}/>
+                                    return <IconButton key={index} id={index} url={icon.link} icon={icon.icon} name={icon.name}/>
                                 })
                             }
                         </div>
