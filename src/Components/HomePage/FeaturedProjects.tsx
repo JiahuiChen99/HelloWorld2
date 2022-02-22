@@ -1,3 +1,20 @@
+import {HiOutlineExternalLink} from "react-icons/hi";
+import {BsCardText, BsGithub} from "react-icons/bs";
+import FeaturedProjectCard from "./FeaturedProjectCard";
+
+interface Icon {
+    name: string;
+    link?: string;
+    icon: JSX.Element;
+}
+export interface FeaturedProject {
+    name: string;
+    short_name?: string;
+    img?: string;
+    colors: string[];
+    icons: Icon[];
+}
+
 const FeaturedProjects = () => {
     return(
         <section id="Featured Projects" className="flex w-full h-auto py-20 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
