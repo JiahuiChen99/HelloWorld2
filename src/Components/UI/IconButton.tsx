@@ -18,7 +18,9 @@ const IconButton = ( props: {id: number, url?: string, icon: JSX.Element, name: 
                 break;
             // Open external link
             default:
-                window.open(props.url)
+                if ( props.url ) {
+                    window.open(props.url);
+                }
         }
     }
     return(
