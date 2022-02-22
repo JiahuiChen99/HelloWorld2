@@ -38,14 +38,14 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
         if ( showDocs ) {
             return (
                 <div className="flex w-1/2 h-full p-20 ">
-                    <div className="flex flex-col w-full h-full z-10 place-items-center gap-y-5 overflow-y-auto">
+                    <div className="flex flex-col w-full h-full z-10 place-items-center gap-y-5 overflow-y-auto p-4">
                         {/* Project description */}
                         <div className="flex w-full h-auto text-justify">
                             { props.project.description }
                         </div>
 
                         {/* Project tech stack */}
-                        <div className="grid grid-cols-4 grid-flow-row place-content-center gap-5">
+                        <div className="flex w-full flex-wrap h-auto justify-center place-content-center gap-10 px-5">
                             { props.project.tech_stack.map( (tech_icon, index) => {
                                 return (
                                     <span key={index}>
