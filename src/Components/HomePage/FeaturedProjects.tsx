@@ -117,9 +117,15 @@ const FeaturedProjects = () => {
     ];
 
     return(
-        <section id="Featured Projects" className="flex flex-col w-full h-auto py-20 gap-y-10 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
-            {/* Featured projects section header */}
-            <h1 className="text-2xl font-bold"> Featured Projects </h1>
+        <section id="Featured Projects" className="flex flex-col w-full h-auto py-10 gap-y-10 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
+            {/* Featured projects' section header */}
+            <div className="flex w-full h-14 place-items-center justify-between">
+                <h1 className="text-3xl font-bold"> Featured Projects </h1>
+                <button className="flex w-auto h-full rounded-xl bg-blue-500 place-items-center px-5 font-bold
+                                   hover:shadow-lg hover:shadow-blue-500/50">
+                    More projects
+                </button>
+            </div>
 
             {/* Featured projects cards */}
             {
