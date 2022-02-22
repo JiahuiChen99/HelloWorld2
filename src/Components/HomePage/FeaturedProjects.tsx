@@ -1,6 +1,9 @@
 import {HiOutlineExternalLink} from "react-icons/hi";
 import {BsCardText, BsGithub} from "react-icons/bs";
 import FeaturedProjectCard from "./FeaturedProjectCard";
+import {IoLogoElectron, IoLogoVue} from "react-icons/io5";
+import {SiBulma, SiDialogflow, SiJava, SiTailwindcss, SiTensorflow} from "react-icons/si";
+import {Golang} from "grommet-icons";
 
 interface Icon {
     name: string;
@@ -11,6 +14,7 @@ export interface FeaturedProject {
     name: string;
     short_name?: string;
     description: string;
+    tech_stack: JSX.Element[];
     img?: string;
     colors: string[];
     icons: Icon[];
@@ -21,10 +25,16 @@ const FeaturedProjects = () => {
         {
             name: "Moodle Learning Analytics",
             short_name: "MLA",
-            description: " MLA is an application that analyses students’ generated Moodle logs and\n" +
-                "performs sentiment analysis from forums’ chats. " +
-                "Starting from January 2022 the software will be used in different Spanish Universities and\n" +
-                "schools (La Salle URL, UPC, URV, etc)",
+            description: " MLA is an application for professors & teachers that analyses students’ generated Moodle logs" +
+                " and performs sentiment & emotion analysis on forums’ discussions. " +
+                "Starting from January 2022 the software will be used in different Spanish Universities and" +
+                "schools (La Salle URL, UPC, URV, Euskadi schools, etc)",
+            tech_stack: [
+                <IoLogoVue size={42}/>,
+                <IoLogoElectron size={42}/>,
+                <SiTailwindcss size={42}/>,
+                <SiTensorflow size={42}/>,
+            ],
             img: "https://raw.githubusercontent.com/LS-LEDA/MLA/main/public/assets/mla_logo.png",
             colors: [
                 'from-[#3F51B5]',
@@ -52,6 +62,12 @@ const FeaturedProjects = () => {
             name: "Yako - Heterogeneous Computing Farm",
             short_name: "Yako",
             description: "",
+            tech_stack: [
+                <Golang size={'42'} color={'black'}/>,
+                <IoLogoVue size={42}/>,
+                <IoLogoElectron size={42}/>,
+                <SiTailwindcss size={42}/>,
+            ],
             colors: [
                 'from-[#C6FFDD]',
                 'via-[#FBD786]',
@@ -76,6 +92,12 @@ const FeaturedProjects = () => {
                 'to-[#4BC0C8]'
             ],
             description: "",
+            tech_stack: [
+                <SiJava size={42}/>,
+                <IoLogoElectron size={42}/>,
+                <SiDialogflow size={42}/>,
+                <SiBulma size={42}/>
+            ],
             icons: [
                 {
                     name: 'More information',
