@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 
 /**
  * Icon Button component displays the meaning on hover
@@ -7,14 +7,14 @@ import {useState} from "react";
  *     name: Name of the button
  * }
  */
-const IconButton = ( props: {id: number, url?: string, icon: JSX.Element, name: string}) => {
+const IconButton = ( props: {id: number, url?: string, icon: JSX.Element, name: string, onOpenDocs: () => void }) => {
     const [hover, setHover] = useState(false);
 
     const clickHandler = ( buttonID ) => {
         switch ( buttonID ) {
             // Show more information
             case 0:
-                // TODO: Show more information
+                props.onOpenDocs();
                 break;
             // Open external link
             default:

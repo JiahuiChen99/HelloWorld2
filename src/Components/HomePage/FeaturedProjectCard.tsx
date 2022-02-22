@@ -6,6 +6,8 @@ import {useState} from "react";
 const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
     // Card hover state
     const [cardHover, setHover] = useState(false);
+    // Show project description
+    const [showDocs, setShowDocs] = useState(false);
 
     const LogoShortTitle = () => {
         // Logo & Short name
@@ -27,6 +29,9 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
             )
         }
     }
+
+    // Callback function for show docs button & close docs button
+    const ShowDocs = () => setShowDocs( show => !show );
 
     return(
         <div className={`flex relative w-full h-[50vh] rounded-xl bg-gradient-to-br ${props.project.colors.join(' ')}`}
