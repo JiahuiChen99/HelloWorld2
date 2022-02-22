@@ -44,6 +44,17 @@ const FeaturedProjectCard = (props: {id: number, project: FeaturedProject}) => {
                             { props.project.description }
                         </div>
 
+                        {/* Project tech stack */}
+                        <div className="grid grid-cols-4 grid-flow-row place-content-center gap-5">
+                            { props.project.tech_stack.map( (tech_icon, index) => {
+                                return (
+                                    <span key={index}>
+                                        { tech_icon }
+                                    </span>
+                                )
+                            }) }
+                        </div>
+
                         {/* Back button */}
                         <button className="flex w-fit h-auto hover:cursor-pointer p-2 px-5 rounded-xl bg-blue-500
                                            shadow-lg shadow-blue-500/50 font-bold"
