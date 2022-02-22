@@ -24,7 +24,8 @@ const IconButton = ( props: {id: number, url?: string, icon: JSX.Element, name: 
         }
     }
     return(
-        <button className="flex w-fit h-fit justify-center items-center border border-slate-300 rounded-xl p-3 gap-x-2"
+        <button className="flex w-fit h-fit justify-center items-center border border-slate-300 rounded-xl p-3 gap-x-2
+                           hover:shadow-lg hover:shadow-slate-300/30"
                 onMouseEnter={ () => {setHover(true)} }
                 onMouseLeave={ () => {setHover(false)} }
                 onClick={ () => clickHandler(props.id) }
