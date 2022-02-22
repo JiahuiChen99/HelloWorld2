@@ -16,6 +16,73 @@ export interface FeaturedProject {
 }
 
 const FeaturedProjects = () => {
+    let featuredProjects: FeaturedProject[] = [
+        {
+            name: "Moodle Learning Analytics",
+            short_name: "MLA",
+            img: "https://raw.githubusercontent.com/LS-LEDA/MLA/main/public/assets/mla_logo.png",
+            colors: [
+                'from-[#3F51B5]',
+                'via-[#9C27B0]',
+                'to-[#E91E63]'
+            ],
+            icons: [
+                {
+                    name: 'More information',
+                    icon: <BsCardText size={26}/>
+                },
+                {
+                    name: 'Link',
+                    link: 'https://ls-leda.github.io/Moodle-Learning-Analytics',
+                    icon: <HiOutlineExternalLink size={26}/>
+                },
+                {
+                    name: 'Github',
+                    link: 'https://github.com/LS-LEDA/MLA',
+                    icon: <BsGithub size={26}/>
+                }
+            ]
+        },
+        {
+            name: "Yako - Heterogeneous Computing Farm",
+            short_name: "Yako",
+            colors: [
+                'from-[#C6FFDD]',
+                'via-[#FBD786]',
+                'to-[#F7797D]'
+            ],
+            icons: [
+                {
+                    name: 'More information',
+                    icon: <BsCardText size={26}/>
+                },
+                {
+                    name: 'Github',
+                    icon: <BsGithub size={26}/>
+                }
+            ]
+        },
+        {
+            name: "LoL Champions Selector",
+            colors:[
+                'from-[#FEAC5E]',
+                'via-[#C779D0]',
+                'to-[#4BC0C8]'
+            ],
+            icons: [
+                {
+                    name: 'More information',
+                    icon: <BsCardText size={26}/>
+                },
+                {
+                    name: 'Github',
+                    link: 'https://github.com/JiahuiChen99/LoLChampSelector-Electron',
+                    icon: <BsGithub size={26}/>
+                }
+            ]
+        }
+    ];
+
     return(
         <section id="Featured Projects" className="flex w-full h-auto py-20 px-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
             <h1 className="text-2xl font-bold"> Featured Projects </h1>
