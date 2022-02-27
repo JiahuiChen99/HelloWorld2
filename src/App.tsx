@@ -1,5 +1,6 @@
 import HomePage from "./Pages/HomePage";
 import NavBar from "./Components/NavigationBar/NavBar";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     return (
@@ -8,6 +9,7 @@ function App() {
             <div className="mt-32">
                 <HomePage/>
             </div>
+            <Footer/>
         </div>
     );
 }
