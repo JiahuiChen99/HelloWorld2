@@ -4,6 +4,7 @@ import FeaturedProjects from "../Components/HomePage/FeaturedProjects";
 function HomePage() {
     return(
         <div className="w-full h-full">
+            <div className="h-32"/>
             <HeroBanner/>
             <FeaturedProjects/>
         </div>
