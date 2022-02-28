@@ -3,14 +3,17 @@ import {MdEmail} from "react-icons/md";
 
 const Footer = () => {
     return(
-        <section id="Footer" className="flex w-full h-[25vh] bg-blue-200 justify-between text-sm p-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
+        <section id="Footer" className="flex w-full h-[25vh]
+        bg-primary dark:bg-gradient-to-t dark:from-dark_bg dark:to-dark_secondary
+        dark:text-dark_text
+        justify-between text-sm p-10 md:px-20 lg:px-32 xl:40 2xl:px-96">
             <div className="flex flex-col justify-between">
                 {/* TODO: Add logo */}
                 <div className="font-bold">
                     Dear reader, Thank you!
                 </div>
                 {/* Copyright */}
-                <div >
+                <div className="flex text-slate-500">
                     © 2022 - present by Jiahui Chen. All Rights Reserved.
                 </div>
             </div>

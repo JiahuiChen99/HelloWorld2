@@ -25,8 +25,11 @@ const NavBar = () => {
 
     return(
         <div className={`flex fixed top-0 w-full h-32 justify-between py-10 transition-all ease-in-out delay-100
-                        bg-white/90 backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-50
+                        backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-50
+                        bg-white/90 dark:bg-slate-900/75
+                        text-text dark:text-dark_text
                         px-10 md:px-20 lg:px-32 xl:40 2xl:px-96
+                        border-slate-200 dark:border-slate-50/10
                         ${atTopPage ? 'border-b-0' : 'border-b'}`}>
             {/* Navigation bar links */}
             <nav className="flex w-auto h-auto">
