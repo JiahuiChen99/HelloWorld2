@@ -1,5 +1,6 @@
-import {Github, Linkedin} from "grommet-icons";
 import {MdEmail} from "react-icons/md";
+import {FaGithubAlt} from "react-icons/fa";
+import {GrLinkedin} from "react-icons/gr";
 
 const Footer = () => {
     return(
@@ -28,13 +29,13 @@ const Footer = () => {
                     <span className="font-bold"> Links </span>
                     <ul className="flex flex-col gap-y-3">
                         <li className="flex space-x-3 text-center">
-                            <Linkedin color="dark" size="20"/>
+                            <GrLinkedin size={20}/>
                             <a className="flex place-items-center" href="https://www.linkedin.com/in/jiahuichen99">
                                 LinkedIn
                             </a>
                         </li>
                         <li className="flex space-x-3">
-                            <Github color="dark" size="20"/>
+                            <FaGithubAlt size={20}/>
                             <a className="flex place-items-center" href="https://github.com/JiahuiChen99">
                                 Github
                             </a>
