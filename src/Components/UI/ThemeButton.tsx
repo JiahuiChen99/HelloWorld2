@@ -17,9 +17,9 @@ const ThemeButton = ( props: {state: boolean}) => {
         let prevTheme:string = localStorage.theme;
         localStorage.theme = prevTheme === 'dark' ? 'light' : 'dark';
         if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
-            document.documentElement.classList.add('dark')
+            document.documentElement.classList.add('dark');
         } else {
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove('dark');
         }
     };
 
