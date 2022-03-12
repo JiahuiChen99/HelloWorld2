@@ -24,7 +24,7 @@ const NavBar = () => {
     }, []);
 
     return(
-        <div className={`flex fixed top-0 w-full h-32 justify-between py-10 transition-all ease-in-out delay-100
+        <div className={`flex fixed top-0 w-full h-32 justify-between py-10
                         backdrop-opacity-95 backdrop-filter backdrop-blur-lg z-50
                         bg-white/90 dark:bg-slate-900/75
                         text-text dark:text-dark_text
