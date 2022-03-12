@@ -1,4 +1,5 @@
 import {BiMoon, BiSun} from "react-icons/bi";
+import {useState} from "react";
 
 /**
  * Theme Selector Button, toggles between light & dark mode
@@ -9,6 +10,8 @@ import {BiMoon, BiSun} from "react-icons/bi";
  * !state: Dark Mode
  */
 const ThemeButton = ( props: {state: boolean}) => {
+    const [currentTheme, setCurrentTheme] = useState(localStorage.theme);
+
     /**
      * Retrieves app's theme saved in local storage and switches
      * between dark / light mode.
@@ -16,6 +19,7 @@ const ThemeButton = ( props: {state: boolean}) => {
     const changeTheme = () => {
         let prevTheme:string = localStorage.theme;
         localStorage.theme = prevTheme === 'dark' ? 'light' : 'dark';
+        setCurrentTheme(localStorage.theme);
         if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -28,7 +32,7 @@ const ThemeButton = ( props: {state: boolean}) => {
              onClick={changeTheme}
         >
             {
-                props.state ? <BiSun size={26}/> : <BiMoon size={26}/>
+                currentTheme === 'dark' ? <BiMoon size={26}/> : <BiSun size={26}/>
             }
         </div>
     )
