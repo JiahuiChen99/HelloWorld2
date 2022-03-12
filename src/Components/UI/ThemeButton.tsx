@@ -28,7 +28,8 @@ const ThemeButton = ( props: {state: boolean}) => {
     };
 
     return(
-        <div className="flex w-auto h-full aspect-square rounded-xl justify-center items-center hover:cursor-pointer"
+        <div className="flex w-auto h-full aspect-square rounded-xl justify-center items-center hover:cursor-pointer
+                        hover:transition-colors duration-500 ease-in-out hover:text-primary_variant"
              onClick={changeTheme}
         >
             {
